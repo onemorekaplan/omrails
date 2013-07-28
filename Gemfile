@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'jquery-rails'
-gem 'font-awesome-sass-rails'
+gem 'font-awesome-rails'
 
 group :production do
 	gem 'pg'
