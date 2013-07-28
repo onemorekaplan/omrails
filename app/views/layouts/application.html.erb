@@ -8,10 +8,10 @@
 	</head>
 	<body>
 		<%= render 'layouts/navbar' %>
-
-		<%= yield %>
-
-		<%= render 'layouts/footer' %>
-
+		
+		<div class="container">
+			<%= yield %>
+			<%= render 'layouts/footer' %>
+		</div>
 	</body>
 </html>

@@ -1,0 +1,21 @@
+$btnPrimaryBackground: green;
+$baseFontFamily: "Architects Daughter", cursive;
+
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+@import 'font-awesome';
+
+body {
+	padding-top: 60px;
+}
+
+.footer {
+	margin-top: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: $gray;
+	a {
+		color: $gray;
+	}
+}
