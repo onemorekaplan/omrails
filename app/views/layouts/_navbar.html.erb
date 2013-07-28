@@ -10,9 +10,7 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="/">
-      	One Month Rails
-      </a>
+      <%= link_to "One Month Rails", root_path, class: "brand" %>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -25,9 +23,18 @@
   				</li>
 				</ul>
 				<ul class="nav pull-right">
-  				<li>
-    				<%= link_to "<i class=\"icon-lock\"></i> Login".html_safe, '#' %>
-  				</li>
+  				<% if user_signed_in? %>
+            <li class="<%= 'active' if current_page?(edit_user_registration_path) %>">
+              <%= link_to "<i class=\"icon-cogs\"></i> Account".html_safe, edit_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to "<i class=\"icon-unlock\"></i> Logout".html_safe, destroy_user_session_path, method: :delete %>
+            </li>
+          <% else %>
+            <li>
+      				<%= link_to "<i class=\"icon-lock\"></i> Login".html_safe, new_user_session_path %>
+    				</li>
+          <% end %>
 				</ul>
       </div>
 
