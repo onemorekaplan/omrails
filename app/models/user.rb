@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   # Fix for a recent update to devise.
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :as => [:default, :admin]
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :firstname, :lastname, :as => [:default, :admin]
 end
