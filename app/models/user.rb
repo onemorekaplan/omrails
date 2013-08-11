@@ -9,7 +9,9 @@ class User < ActiveRecord::Base
   # Fix for a recent update to devise.
   attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :firstname, :lastname, :as => [:default, :admin]
 
+  # Ensures the password and the password confirmation match.
+  validates :password, confirmation: true
+
   # Ensures that all users have a first and last name.
-  validates_presence_of :firstname
-  validates_presence_of :lastname
+  validates :firstname, :lastname, :email, :password, :password_confirmation, presence: true
 end
